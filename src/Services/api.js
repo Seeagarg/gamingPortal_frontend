@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const BACKEND_URL = 'http://localhost:4001/api'
-const BACKEND_URL = 'https://gaming-portal-backend.vercel.app/'
+const BACKEND_URL = 'https://gaming-portal-backend.vercel.app/api'
 
 
 
