@@ -29,12 +29,18 @@ const Navbar = () => {
 
       const [selectedOption, setSelectedOption] = useState(0);
       const [open,setOpen] = useState(false);
-      console.log(open);
+      // console.log(open);
 
       const handleChange=(selectedOption)=>{
         console.log(selectedOption)
         dispatch(setLanguage(selectedOption.value))
         setSelectedOption(selectedOption);
+      }
+
+      const handleMenuItem=(item)=>{
+        dispatch(setCategory(item))
+        console.log(open,'==')
+        setOpen(false)
       }
 
 
@@ -46,10 +52,10 @@ const Navbar = () => {
     <div className={classes.sub_container}>
    
     <div className={classes.logo}>
-   logo
+   <img src="/assets/logo.png" alt="" className={classes.logo_img} />
    </div>
    
-   <div className={classes.lang_btn}>
+   {/* <div className={classes.lang_btn}>
    <Select
    className={classes.selector}
         defaultValue='EN'
@@ -97,7 +103,7 @@ const Navbar = () => {
         onChange={handleChange}
         options={options}
       />
-   </div>
+   </div> */}
    
 
    <div className={classes.menu_icon} >
@@ -108,36 +114,49 @@ const Navbar = () => {
 <div className={open?classes.menu:classes.no_menu}>
 
 {/* <div className={classes.menu_items}> */}
-<Link to='/' className={classes.item} onClick={()=>{dispatch(setCategory("All Games"))}}>
+<div  className={classes.item} onClick={()=>{handleMenuItem("All Games")}}>
 
-<SportsCricketIcon fontSize='large'/> <p>&nbsp; All Games</p>
+{/* <SportsCricketIcon fontSize='large'/> */}
+<img src="/assets/all.png" alt="" className={classes.icon} />
+ <p>&nbsp; All Games</p>
  
-</Link>
-<Link to='/' className={classes.item}  onClick={()=>{dispatch(setCategory("Sports"))}}>
+</div>
+<div  className={classes.item} onClick={()=>{handleMenuItem("New")}}>
 
-<SportsCricketIcon fontSize='large'/> <p>&nbsp; Sports</p>
+{/* <SportsCricketIcon fontSize='large'/> */}
+<img src="/assets/new.png" alt="" className={classes.icon} />
+ <p>&nbsp; New</p>
  
-</Link>
-<Link to='/' className={classes.item}  onClick={()=>{dispatch(setCategory("Puzzle"))}}>
+</div>
+<div  className={classes.item}  onClick={()=>{handleMenuItem("Games")}}>
 
-<ExtensionIcon fontSize='large'/><p>&nbsp; Puzzle</p> 
-
-</Link>
-<Link to='/' className={classes.item}  onClick={()=>{dispatch(setCategory("Racing"))}}>
-
-<SportsScoreIcon fontSize='large'/> <p>&nbsp;  Racing</p>
+{/* <SportsCricketIcon fontSize='large'/>  */}
+<img src="/assets/games.png" alt="" className={classes.icon} />
+<p>&nbsp; Games</p>
  
-</Link>
-<Link to='/' className={classes.item}  onClick={()=>{dispatch(setCategory("Quiz"))}}>
+</div>
+<div  className={classes.item}  onClick={()=>{handleMenuItem("Quiz")}}>
 
-<QuestionMarkIcon fontSize='large'/><p>&nbsp; Quiz</p>
+{/* <ExtensionIcon fontSize='large'/> */}
+<img src="/assets/quiz.png" alt="" className={classes.icon} />
+<p>&nbsp; Quiz</p> 
+
+</div>
+<div  className={classes.item}  onClick={()=>{handleMenuItem("Fantasy")}}>
+
+{/* <SportsScoreIcon fontSize='large'/>  */}
+<img src="/assets/fantasy.png" alt="" className={classes.icon} />
+<p>&nbsp;  Fantasy</p>
  
-</Link>
-<Link to='/' className={classes.item}  onClick={()=>{dispatch(setCategory("Cards"))}}>
+</div>
+<div className={classes.item}  onClick={()=>{handleMenuItem("Videos")}}>
 
-<SportsKabaddiIcon fontSize='large'/> <p>&nbsp; Cards </p>
+{/* <QuestionMarkIcon fontSize='large'/> */}
+<img src="/assets/video.png" alt="" className={classes.icon} />
+<p>&nbsp;Videos</p>
+ 
+</div>
 
-</Link>
 
 
 {/*  </div> */}

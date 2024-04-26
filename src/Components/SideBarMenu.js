@@ -43,14 +43,14 @@ const SideBarMenu = () => {
     }}
   >
   
-  <MenuItem onClick={()=>{!open?dispatch(openSideBar()):dispatch(closeSideBar())}} className={classes.item_title}  ><MenuIcon/> </MenuItem>
+  <MenuItem onClick={()=>{!open?dispatch(openSideBar()):dispatch(closeSideBar())}} className={`${classes.item_title} ${classes.item}`} icon={<img src="/assets/menu.png" alt="" className={classes.icon}/>} ></MenuItem>
   {/* <SubMenu label="Categories"> */}
-  <MenuItem component={<Link to="/" />} className={classes.item} icon={<SportsCricketIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('All Games'))}> All Games</MenuItem>
-    <MenuItem component={<Link to="/" />} className={classes.item} icon={<SportsCricketIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('Sports'))}> Sports Games</MenuItem>
-    <MenuItem component={<Link to="/" />} className={classes.item} icon={<ExtensionIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('Puzzle'))}> puzzle Games</MenuItem>
-    <MenuItem component={<Link to="/" />} className={classes.item} icon={<SportsScoreIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('Racing'))}> Racing Games</MenuItem>
-    <MenuItem component={<Link to="/" />} className={classes.item} icon={<QuestionMarkIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('Quiz'))}> Quiz Games</MenuItem>
-    <MenuItem component={<Link to="/" />} className={classes.item} icon={<SportsKabaddiIcon fontSize='large'/>} onClick={()=>dispatch(setCategory('Cards'))}> Cards Games</MenuItem>
+  <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/all.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('All Games'))}> All</MenuItem>
+    <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/new.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('New'))}> New</MenuItem>
+    <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/games.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('Games'))}> Games</MenuItem>
+    <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/quiz.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('Quiz'))}> Quiz</MenuItem>
+    <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/fantasy.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('Fantasy'))}>Fantasy</MenuItem>
+    <MenuItem component={<Link to="/" />} className={classes.item} icon={<img src="/assets/video.png" alt="" className={classes.icon}/>} onClick={()=>dispatch(setCategory('Videos'))}>Videos</MenuItem>
     {/* </SubMenu> */} 
   </Menu>
 </Sidebar>

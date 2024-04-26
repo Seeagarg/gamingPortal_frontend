@@ -5,21 +5,29 @@
     height: 100%;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: rgb(231,225,234);
-background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1) 91%);
+    /* position: sticky; */
+    /* background: rgb(231,225,234);
+background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1) 91%); */
+background-color: #afdde56c;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+/* background: radial-gradient(circle, rgba(52,227,241,0.062237394957983194) 35%, rgba(108,27,184,0.1518732492997199) 65%); */
+   
     /* gap: 2rem; */
+
+    
 }
 
 .sidebar_main{
     height: 100dvh;
     scrollbar-width: 0 !important;
-    background: rgb(231,225,234);
-background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1) 91%);
+    /* background: rgb(231,225,234); */
+/* background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1) 91%); */
+/* background: rgba(206, 52, 241, 0.105); */
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     
     /* padding-top: 2rem; */
     /* padding: 1rem; */
@@ -33,10 +41,13 @@ background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1)
     /* margin: 1rem; */
     /* padding: 1rem; */
     padding-left: 0;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #003135;
     /* padding-left: 0; */
 }
 
@@ -50,12 +61,20 @@ background: radial-gradient(circle, rgba(231,225,234,1) 28%, rgba(177,177,225,1)
     margin-top: 2rem;
     display: flex;
     justify-content: center;
+    color: #003135;
+    
     /* text-align: center; */
 }
 
 .item_title span{
     margin-bottom: 10px;
+    
     /* margin-left: 5px; */
+}
+
+.icon{
+    height: 2rem;
+    width: 2rem;
 }
 
 /* .item:hover{
